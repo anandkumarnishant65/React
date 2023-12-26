@@ -2,22 +2,20 @@ import React, {useState} from 'react';
 
 import './ExpenseItem.css';
 
-
 function ExpenseDetails(props){
-
+    
     const [title,setTitle]=useState(props.title);
-
     const clickHandler = ()=>{
         setTitle('Updated!!!');
         console.log(title)
     }
 
     const [amount,setAmount]=useState(props.amount);
-
     const clickHandle = ()=>{
         setAmount('100');
         console.log(amount)
     }
+
 
     return(
         <div className="expense-item__description">
