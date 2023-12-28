@@ -2,7 +2,7 @@ import {useState} from 'react';
 import React from 'react';
 import './ExpenseForm.css'
 
-const ExpenseForm=()=>{
+const ExpenseForm=(props)=>{
 
     const [enteredTitle,setEnteredTitle]=useState("");
     const [enteredAmount,setEnteredAmount]=useState("");
@@ -53,7 +53,10 @@ const ExpenseForm=()=>{
             amount:enteredAmount,
             date:new Date(enteredDate)
         }
-        console.log(expenseData);
+        props.onSaveExpenseData(expenseData)
+        setEnteredTitle('')
+        setEnteredAmount('')
+        setEnteredDate('')
     }
 
     return (
@@ -62,17 +65,17 @@ const ExpenseForm=()=>{
             
                 <div className='new-expense__control label'>
                     <label>Title</label>
-                    <input type="text" onChange={titleChangeHandler}></input>
+                    <input type="text" value={enteredTitle} onChange={titleChangeHandler}></input>
                 </div>
             
                 <div className='new-expense__control label'>
                     <label>Amount</label>
-                    <input type="number" min="1" step="1" onChange={amountChangeHandler}></input>
+                    <input type="number" min="1" step="1" value={enteredAmount} onChange={amountChangeHandler}></input>
                 </div>
                 
                 <div className='new-expense__control label'>
                     <label>Date</label>
-                    <input type="date" min="2019-01-01" max="2024-12-31" onChange={dateChangeHandler}></input>
+                    <input type="date" min="2019-01-01" max="2024-12-31" value={enteredDate} onChange={dateChangeHandler}></input>
                 </div>
             
                 <div className='new-expense__control label'>

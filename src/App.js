@@ -34,10 +34,13 @@ function App() {
       location: 'lucknow',
     },
   ]
-  
+  const addExpenseHandler=(expense)=>{
+    console.log('In App.js')
+    console.log(expense)
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses}/>
     </div>
   );
