@@ -9,7 +9,7 @@ function ExpenseItem(props){
     return (
      <Kard className = "expense-item">
         <ExpenseDate date={props.date}/>
-        <ExpenseDetails amount={props.amount} title={props.title} location={props.location}/>    
+        <ExpenseDetails amount={props.amount} title={props.title}/>    
     </Kard>
 )}
 
