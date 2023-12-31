@@ -10,28 +10,24 @@ const DUMMY_EXPENSES=[
     title:'Tooth Paste',
     amount:55,
     date:new Date(2022,0,23),
-    location: 'bhopal',
   },
   {
     id:'e2',
     title:'Deodorant',
     amount:220,
-    date:new Date(2022,7,24),
-    location: 'jaipur',
+    date:new Date(2022,11,24),
   },
   {
     id:'e3',
-    title:'TV',
-    amount:22000,
+    title:'Radio',
+    amount:600,
     date:new Date(2022,3,2),
-    location: 'delhi',
   },
   {
     id:'e4',
     title:'T-shirt',
     amount:550,
     date:new Date(2022,7,28),
-    location: 'lucknow',
   },
 ]
 
